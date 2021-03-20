@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "standard --fix",
     "setup": "DEBUG=iot-node:* node setup.js",
-    "test": "DEBUG=iot-node:* ava tests/* --verbose"
+    "test": "DEBUG=iot-node:* nyc --reporter=lcov ava tests/* --verbose"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "ava": "^3.15.0",
     "chalk": "^4.1.0",
     "inquirer": "^8.0.0",
+    "nyc": "^15.1.0",
     "sqlite3": "^5.0.2",
     "standard": "^16.0.3"
   },
