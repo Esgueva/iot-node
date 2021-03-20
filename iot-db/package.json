@@ -1,0 +1,35 @@
+{
+  "name": "iot-db",
+  "version": "1.0.0",
+  "description": "A Simple IoT Plataform - DB Module",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard --fix",
+    "setup": "DEBUG=iot-node:* node setup.js",
+    "test": "DEBUG=iot-node:* ava tests/* --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Esgueva/iot-node.git"
+  },
+  "author": "Rodrigo Esgueva Ordóñez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Esgueva/iot-node/issues"
+  },
+  "homepage": "https://github.com/Esgueva/iot-node#readme",
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "chalk": "^4.1.0",
+    "inquirer": "^8.0.0",
+    "sqlite3": "^5.0.2",
+    "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "debug": "^4.3.1",
+    "defaults": "^1.0.3",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.5.1"
+  }
+}
