@@ -1,0 +1,30 @@
+{
+  "name": "iot-mqtt",
+  "version": "1.0.0",
+  "provate": true,
+  "description": "A Simple IoT Platform - MQTT Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=produccion node server.js",
+    "dev": "DEBUG=iot-node:* nodemon server.js",
+    "lint": "standard"
+  },
+  "author": "Rodrigo Esgueva",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "aedes": "^0.45.0",
+    "aedes-persistence-redis": "^8.0.0",
+    "chalk": "^4.1.0",
+    "cluster": "^0.7.7",
+    "iot-db": "file:../iot-db",
+    "jsonschema": "^1.2.6",
+    "mqemitter-redis": "^4.1.0",
+    "net": "^1.0.2",
+    "redis": "^3.1.0",
+    "websocket-stream": "^5.5.2"
+  }
+}
