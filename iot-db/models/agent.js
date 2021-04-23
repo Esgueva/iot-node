@@ -1,36 +1,36 @@
-'use strict'
+"use strict";
 
-const Sequelize = require('sequelize')
-const setupDatabase = require('../lib/db')
+const Sequelize = require("sequelize");
+const setupDatabase = require("../lib/db");
 
-module.exports = function setupAgentModel (config) {
-  const sequelize = setupDatabase(config)
+module.exports = function setupAgentModel(config) {
+  const sequelize = setupDatabase(config);
 
-  return sequelize.define('agent', {
+  return sequelize.define("agent", {
     uuid: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
     username: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
     name: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
     hostname: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
     pid: {
       type: Sequelize.INTEGER,
-      allowNull: false
+      allowNull: false,
     },
     connected: {
       type: Sequelize.BOOLEAN,
       allowNull: false,
-      defaultValue: false
-    }
-  })
-}
+      defaultValue: false,
+    },
+  });
+};
