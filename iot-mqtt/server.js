@@ -144,13 +144,12 @@ mqtt.on('publish', async (packet, client) => {
 
           // Store Metrics
           for (const metric of payload.agent.metrics) {
-            let m
             try {
-              m = await Metric.create(agent.uuid, metric)
+              await Metric.create(agent.uuid, metric)
             } catch (e) {
               return handleError(e)
             }
-            msgSuccess('METRIC', `save Metrics ${m} on Agent: ${agent.uuid}`)
+            msgSuccess('METRIC', `save Metrics on Agent: ${agent.uuid}`)
           }
         }
         break
