@@ -38,3 +38,28 @@
   timestamp // generar cuando creamos el mensaje
 }
 ```
+
+```json
+{
+  {
+    "agent": {
+      "uuid": "QWER",
+      "name": "Test",
+      "username": "test",
+      "pid": 123,
+      "hostname": "mac",
+      "metrics": [
+        {
+          "type": "memory",
+          "value": "1024"
+        },
+        {
+          "type": "temp",
+          "value": "34"
+        }
+      ]
+    }
+  }
+}
+´´´
+```

@@ -108,14 +108,15 @@ mqtt.on('unsubscribe', function (subscriptions, client) {
 // Publish
 mqtt.on('publish', async (packet, client) => {
   if (client) {
+    const payload = parsePayload(packet.payload)
     switch (packet.topic) {
       case 'agent/connected':
       case 'agent/disconnected':
         break
       case 'agent/message':
-        const payload = parsePayload(packet.payload)
         if (payload) {
           payload.agent.connected = true
+          // Refactor: hacer de manera paralela
           let agent
           try {
             agent = await Agent.createOrUpdate(payload.agent)
@@ -149,7 +150,7 @@ mqtt.on('publish', async (packet, client) => {
             } catch (e) {
               return handleError(e)
             }
-            msgSuccess('METRIC', 'save on Agent:', agent.uuid)
+            msgSuccess('METRIC', `save Metrics ${m} on Agent: ${agent.uuid}`)
           }
         }
         break
