@@ -1,6 +1,7 @@
 {
   "name": "iot-db",
   "version": "1.0.0",
+  "private": true,
   "description": "A Simple IoT Plataform - DB Module",
   "main": "index.js",
   "scripts": {
